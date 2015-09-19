@@ -80,7 +80,7 @@ for (i in 1:nrow(activity2)) {
   
   if (is.na(activity2$steps[i])) {
     
-    activity2$steps[i] <- steps_per_interval %>%
+    activity2$steps[i] <- avg_steps_per_interval %>%
       filter(interval == activity2$interval[i]) %>%
       select(steps)
   }
